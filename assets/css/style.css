@@ -1,0 +1,483 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+::selection {
+  background: purple;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: lightgrey;
+}
+
+::-webkit-scrollbar-track {
+  background: lightgrey;
+}
+
+::-webkit-scrollbar-thumb {
+  background: purple;
+  border-radius: 10px;
+}
+
+h1 {
+  font-family: "Righteous", sans-serif;
+  font-size: 3rem;
+}
+
+h2 {
+  font-family: "Righteous", sans-serif;
+  font-size: 2.25rem;
+}
+
+h5 {
+  font-family: "Righteous", sans-serif;
+  font-size: 1.7rem;
+}
+
+p {
+  font-family: "Gentium Basic", sans-serif;
+  font-size: 1.5rem;
+}
+
+nav {
+  background-color: rgba(139, 74, 150, 0.9);
+  box-shadow: 0 -30px 50px 10px black;
+}
+nav .navbar-toggler i {
+  font-size: 30px;
+  align-items: center;
+}
+nav img {
+  transition: 0.3s ease-in-out;
+  width: 300px;
+  color: black;
+}
+nav img:hover {
+  opacity: 50%;
+}
+nav ul li a {
+  color: white;
+  margin: 10px;
+  transition: ease-in-out 0.3s;
+  border-radius: 20px;
+}
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: black;
+}
+
+#about {
+  padding-bottom: 125px;
+  padding-top: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: linear-gradient(#b06ab3, #4568dc);
+}
+#about img {
+  border-radius: 1000px;
+  width: 250px;
+  background: rgba(128, 0, 128, 0.2);
+  margin: auto;
+  display: block;
+  text-align: center;
+}
+#about h1 {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+#about p {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#history {
+  padding: 70px;
+  padding-top: 130px;
+  color: white;
+  background: url("../img/history_bg.png");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+#history h1 {
+  text-align: center;
+}
+#history p {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 30%;
+  border: 8px solid grey;
+}
+
+#projects {
+  color: white;
+  padding: 70px;
+  padding-top: 100px;
+  background: url("../img/cinema_bg.png");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+#projects .carousel-indicators li {
+  border-radius: 500%;
+  width: 10px;
+  height: 10px;
+}
+#projects .carousel-inner {
+  width: 100%;
+}
+#projects .carousel-inner .carousel-item img {
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 20px;
+  border: 5px solid #333333;
+  width: 37%;
+  box-shadow: 0px 0px 15px 10px black;
+}
+#projects h1 {
+  text-align: center;
+  padding: 30px;
+}
+#projects h2 {
+  text-align: center;
+}
+#projects p {
+  text-align: center;
+}
+#projects .carousel-control-next {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  border-radius: 50%;
+  right: 20%;
+  top: 50%;
+}
+#projects .carousel-control-prev {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  border-radius: 50%;
+  left: 20%;
+  top: 50%;
+}
+
+.adjust-img img {
+  width: 8000px;
+  height: 1200px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 50px 50px 10px 10px;
+}
+.card img {
+  border-radius: 50px 50px 0px 0px;
+}
+
+#games {
+  text-align: center;
+  background: url("../img/games_2.png");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+#offerings {
+  padding: 100px;
+  color: white;
+  background: url("../img/stream_bg.png");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+#offerings h1 {
+  text-align: center;
+  padding: 30px;
+}
+#offerings h2 {
+  text-align: center;
+}
+#offerings p {
+  text-align: center;
+}
+
+.music-bg {
+  background: url("../img/music.png");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.music-bg h1 {
+  text-align: center;
+  padding: 30px;
+}
+.music-bg h2 {
+  text-align: center;
+}
+.music-bg p {
+  text-align: center;
+}
+
+.maps {
+  top: 20px;
+}
+
+#contact {
+  padding: 100px;
+  background: linear-gradient(#b06ab3, #4568dc);
+  overflow: hidden;
+}
+#contact h1 {
+  text-align: center;
+}
+#contact p {
+  text-align: center;
+}
+#contact textarea {
+  resize: none;
+  border: 1px solid black;
+  outline-width: 0;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+#contact input {
+  border: 1px solid black;
+  outline: none;
+  outline: none;
+  outline-width: 0;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+#contact .btn-outline-primary {
+  background-color: #7868C8;
+  color: white;
+  border: 2px solid #333333;
+  padding: 15px 70px;
+  font-weight: 500;
+  margin-top: 20px;
+  font-size: 13px;
+  border-radius: 10;
+}
+#contact .btn-outline-primary:hover {
+  color: black;
+  background: white;
+  border: 2px solid #333333;
+}
+
+.form-group {
+  width: 33rem;
+}
+
+#offering-pics {
+  display: flex;
+  flex-direction: column;
+}
+
+.upper-half {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.upper-half img {
+  width: 300px;
+  border-radius: 10px;
+  margin: 10px;
+  margin-left: -500px 0 -500px 0;
+  border: 5px solid pink;
+  padding: 50px;
+}
+.upper-half .box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.upper-half .box .icon {
+  color: black;
+  background: lightpink;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 301px;
+  text-align: center;
+  position: absolute;
+  border-radius: 10px;
+  top: 3.1%;
+  bottom: 0%;
+  opacity: 0%;
+  transition: 0.35s ease-in-out;
+  font-size: 4.25rem;
+  font-weight: 600;
+}
+.upper-half .box .icon:hover {
+  opacity: 100%;
+}
+
+.lower-half {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.lower-half img {
+  width: 300px;
+  border-radius: 10px;
+  margin: 10px;
+  margin-left: -500px 0 -500px 0;
+  border: 5px solid pink;
+  padding: 50px;
+}
+.lower-half .box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.lower-half .box .icon {
+  color: black;
+  background: lightpink;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 301px;
+  text-align: center;
+  position: absolute;
+  border-radius: 10px;
+  top: 3.1%;
+  bottom: 0%;
+  opacity: 0%;
+  transition: 0.35s ease-in-out;
+  font-size: 4.25rem;
+  font-weight: 600;
+}
+.lower-half .box .icon:hover {
+  opacity: 100%;
+}
+
+.modal {
+  color: white;
+}
+.modal .modal-header {
+  background-color: #9F69B9;
+}
+.modal .modal-body {
+  background-color: #9F69B9;
+}
+.modal .modal-footer {
+  background-color: #9F69B9;
+}
+.modal .btn {
+  color: white;
+  background-color: #AF69B3;
+  border: 2px solid black;
+  width: 90px;
+}
+.modal .btn:hover {
+  color: black;
+  background-color: white;
+}
+.modal .close {
+  color: white;
+}
+.modal .close:hover {
+  color: white;
+  background: transparent;
+}
+
+.back2top {
+  color: black;
+  transition: 0.2s ease-in-out;
+  padding-top: 20px;
+}
+.back2top:hover {
+  text-decoration: none;
+  opacity: 80%;
+}
+
+.card {
+  overflow: hidden;
+}
+
+.inner {
+  overflow: hidden;
+}
+.inner img {
+  transition: all 0.8s;
+}
+.inner img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+#contact .form-group {
+  margin-top: 40px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+#contact button {
+  padding: 10px 15px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  background-color: white;
+  color: grey;
+  transition: 0.6s ease;
+}
+
+footer {
+  padding: 25px;
+  background-color: #4768DB;
+  box-shadow: 0 60px 100px 1px black;
+  color: white;
+}
+footer small {
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 1390px) {
+  #history {
+    background-size: 300%;
+  }
+
+  #projects {
+    background-size: 300%;
+  }
+
+  #games {
+    background-size: 300%;
+  }
+
+  .music-bg {
+    background-size: 300%;
+  }
+
+  #offerings {
+    background-size: 300%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
